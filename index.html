@@ -152,6 +152,79 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Spring_batis学习-maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/14/Spring_batis%E5%AD%A6%E4%B9%A0-maven/">Spring_batis学习-maven</a>
+    </h1>
+  
+
+         <!--显示阅读次数-->
+	
+	
+        <a href="/2020/05/14/Spring_batis%E5%AD%A6%E4%B9%A0-maven/" class="archive-article-date">
+  	<time datetime="2020-05-14T13:06:11.972Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+	
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-关于maven和jdbc数据库连接中学到的和一些问题"><a href="#title-关于maven和jdbc数据库连接中学到的和一些问题" class="headerlink" title="title: 关于maven和jdbc数据库连接中学到的和一些问题"></a>title: 关于maven和jdbc数据库连接中学到的和一些问题</h2><p>##所需jar包<br>1.</p>
+<h2 id="aop切片"><a href="#aop切片" class="headerlink" title="aop切片"></a>aop切片</h2><ol>
+<li>将列表和数组连接的方法<br><code>List&lt;数组的数据类型&gt; list = Arrays.asList(需要转换成列表的数组)</code></li>
+<li>把类中aop的切片注释去掉，在xml中实现代理切片<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span> = <span class="string">"proxyAOP"</span> <span class="attr">class</span> = <span class="string">"sp.CalProxy_xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span><span class="comment">&lt;!-- 生成了aop的xml方式的proxy代理实例，也可在类上用@component自动扫描生成实例 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"proxyAOP"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(public int sp.ICal.*(..))"</span> <span class="attr">id</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"bf"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"af"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"afr"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span> <span class="attr">returning</span>=<span class="string">"ob"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"aft"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span> <span class="attr">throwing</span>=<span class="string">"ex"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<li>在AfterReturning中的returning参数需要注意返回值类型是什么。</li>
+<li>aop Aspect的自动代理<br><code>&lt;aop:aspectj-autoproxy&gt;&lt;/aop:aspectj-autoproxy&gt;</code></li>
+<li>自动扫描类实例化<br><code>&lt;context:component-scan base-package=&quot;需要扫描的类的包名&quot;&gt;&lt;/context:component-scan&gt;</code><br><br>
+        
+          <a class="article-more-a" href="/2020/05/14/Spring_batis%E5%AD%A6%E4%B9%A0-maven/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/14/Spring_batis%E5%AD%A6%E4%B9%A0-maven/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -211,81 +284,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/14/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-    <article id="post-Maven_1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/19/Maven_1/">Maven_1</a>
-    </h1>
-  
-
-         <!--显示阅读次数-->
-	
-	
-        <a href="/2020/03/19/Maven_1/" class="archive-article-date">
-  	<time datetime="2020-03-19T14:19:28.797Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
-</a>
-	
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<p>title: 关于maven和jdbc数据库连接中学到的和一些问题<br>categories: 备忘<br>tags: Maven</p>
-<hr>
-<p>##所需jar包<br>1.</p>
-<h2 id="aop切片"><a href="#aop切片" class="headerlink" title="aop切片"></a>aop切片</h2><ol>
-<li>将列表和数组连接的方法<br><code>List&lt;数组的数据类型&gt; list = Arrays.asList(需要转换成列表的数组)</code></li>
-<li>把类中aop的切片注释去掉，在xml中实现代理切片<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span> = <span class="string">"proxyAOP"</span> <span class="attr">class</span> = <span class="string">"sp.CalProxy_xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">bean</span>&gt;</span><span class="comment">&lt;!-- 生成了aop的xml方式的proxy代理实例，也可在类上用@component自动扫描生成实例 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aop:config</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">aop:aspect</span> <span class="attr">ref</span>=<span class="string">"proxyAOP"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:pointcut</span> <span class="attr">expression</span>=<span class="string">"execution(public int sp.ICal.*(..))"</span> <span class="attr">id</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:before</span> <span class="attr">method</span>=<span class="string">"bf"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after</span> <span class="attr">method</span>=<span class="string">"af"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after-returning</span> <span class="attr">method</span>=<span class="string">"afr"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span> <span class="attr">returning</span>=<span class="string">"ob"</span>/&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">aop:after-throwing</span> <span class="attr">method</span>=<span class="string">"aft"</span> <span class="attr">pointcut-ref</span>=<span class="string">"expl"</span> <span class="attr">throwing</span>=<span class="string">"ex"</span>/&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">aop:aspect</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aop:config</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li>在AfterReturning中的returning参数需要注意返回值类型是什么。</li>
-<li>aop Aspect的自动代理<br><code>&lt;aop:aspectj-autoproxy&gt;&lt;/aop:aspectj-autoproxy&gt;</code></li>
-<li>自动扫描类实例化<br><code>&lt;context:component-scan base-package=&quot;需要扫描的类的包名&quot;&gt;&lt;/context:component-scan&gt;</code><br><br>
-        
-          <a class="article-more-a" href="/2020/03/19/Maven_1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/19/Maven_1/">展开全文 >></a>
         </p>
       
 
