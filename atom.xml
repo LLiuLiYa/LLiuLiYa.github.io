@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-05-14T13:06:21.952Z</updated>
+  <updated>2020-06-03T06:46:49.770Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Aop切面编程</title>
+    <link href="http://yoursite.com/2020/06/03/spring-Aop-1/"/>
+    <id>http://yoursite.com/2020/06/03/spring-Aop-1/</id>
+    <published>2020-06-03T06:46:49.655Z</published>
+    <updated>2020-06-03T06:46:49.770Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="所需步骤"><a href="#所需步骤" class="headerlink" title="所需步骤"></a>所需步骤</h2><p>1.导包<br>2.编程<br>3.测试</p><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;所需步骤&quot;&gt;&lt;a href=&quot;#所需步骤&quot; class=&quot;headerlink&quot; title=&quot;所需步骤&quot;&gt;&lt;/a&gt;所需步骤&lt;/h2&gt;&lt;p&gt;1.导包&lt;br&gt;2.编程&lt;br&gt;3.测试&lt;/p&gt;
+&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#
+      
+    
+    </summary>
+    
+    
+      <category term="MVC" scheme="http://yoursite.com/categories/MVC/"/>
+    
+    
+      <category term="Spring" scheme="http://yoursite.com/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>stack</title>
+    <link href="http://yoursite.com/2020/05/14/stack/"/>
+    <id>http://yoursite.com/2020/05/14/stack/</id>
+    <published>2020-05-14T14:06:57.000Z</published>
+    <updated>2020-05-14T14:09:37.503Z</updated>
+    
+    <content type="html"><![CDATA[<p>###fff</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;###fff&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+      <category term="算法和数据结构" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E5%92%8C%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    
+      <category term="双栈的四则运算" scheme="http://yoursite.com/tags/%E5%8F%8C%E6%A0%88%E7%9A%84%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>Spring_batis学习-maven</title>
